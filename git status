@@ -1,0 +1,17 @@
+[33mcommit c67907f266beaa945d3d24c24668ac08e27f744b[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Lucas Cavalcanti de Araujo <lcavalcantidearaujo@gmail.com>
+Date:   Thu Oct 6 11:38:37 2022 -0300
+
+    Criação dos components
+
+[33mcommit 64ae4ef8c5d7ad85742eb3727e6856de76178648[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Lucas Cavalcanti de Araujo <lcavalcantidearaujo@gmail.com>
+Date:   Wed Oct 5 18:54:54 2022 -0300
+
+    criação das rotas - MainRoutes e dos arquivos das pages
+
+[33mcommit 8cfd46ec0565a427f069cbb93587abcdd7857cbf[m
+Author: Lucas Cavalcanti de Araujo <lcavalcantidearaujo@gmail.com>
+Date:   Wed Oct 5 18:23:22 2022 -0300
+
+    first commit
