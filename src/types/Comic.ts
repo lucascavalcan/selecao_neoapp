@@ -3,7 +3,20 @@ export type Comic = {
     id: number,
     issueNumber: number,
     description: string,
-    thumbnail: string,
-    creators: string,
+    thumbnail: {
+        path: string,
+        extension: string
+    },
+    creators: {
+        available: number,
+        collectionURI: string,
+        items: Item[] 
+        
+    },
     prices: string
+};
+
+export type Item =  { 
+    name: string,
+    role: string
 }

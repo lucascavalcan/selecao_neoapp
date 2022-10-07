@@ -10,6 +10,7 @@ export const Container = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 50px;
 `;
 
 export const HeaderLogo = styled.div`

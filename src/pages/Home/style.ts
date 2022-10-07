@@ -1,3 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+    .listItem {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+`;

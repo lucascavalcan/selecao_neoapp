@@ -6,6 +6,7 @@ import { ListItem } from "../../components/ListItem";
 
 import { Comic } from "../../types/Comic";
 
+
 export const Home = () => {
     
     const [comics, setComics] = useState<Comic[]>([])
