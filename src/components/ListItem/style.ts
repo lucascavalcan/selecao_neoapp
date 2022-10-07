@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import bgHeader from "../../images/bg-black-and-white-1.png";
 
 export const Container = styled.div`
     display: flex;
@@ -21,6 +22,7 @@ export const Area = styled.div`
 
 export const Image = styled.div`
     box-shadow:0px 0px 50px rgba(0, 0, 0, 0.4);
+    background-image: url(${bgHeader});
         img {
             transform: scale(1);
             transition: all ease 0.3s;
@@ -31,8 +33,8 @@ export const Image = styled.div`
         }
 `;
 
-export const Add = styled.div`
-
+export const Title = styled.div`
+    font-weight: bold;
 `;
 
 export const Price = styled.div`
@@ -44,10 +46,10 @@ export const Price = styled.div`
 
 export const Info = styled.div`
     font-size:14px;
-    font-weight: bold;
     color:#000;
     margin-top:10px;
     width: 200px;
+    height: 104px;
     text-align: center;
     transition: all 0.3s ease;
 

@@ -6,8 +6,15 @@ import { ListItem } from "../../components/ListItem";
 
 import { Comic } from "../../types/Comic";
 
+import {UseAppSelector} from "../../redux/hooks/useAppSelector";
+import {setItems} from "../../redux/reducers/cartReducer";
+import {useDispatch} from "react-redux";
+
 
 export const Home = () => {
+
+    const dispacth = useDispatch();
+    const card = UseAppSelector(state => state.cart);
     
     const [comics, setComics] = useState<Comic[]>([])
     const [loading, setLoading] = useState(false);
@@ -25,20 +32,27 @@ export const Home = () => {
         console.log(comics)
     }
 
+    function handleAddProdut() {
+        dispacth( setItems(card.items) );
+    }
+
     return (
         <Theme>
             <C.Container>
                 {loading &&
                     <div>Carregando...</div>
                 }
+                <>
 
-                {!loading && comics.length > 0 &&
-                    <div className="listItem">
-                        {comics.map((item, index) => (
-                            <ListItem data={item} key={index}/>
-                        ))}
-                    </div>
-                }
+                    {!loading && comics.length > 0 &&
+                        <div className="listItem">
+                            {comics.map((item, index) => (
+                                <ListItem data={item} key={index}/>
+                            ))}
+                        </div>
+                    }
+                </>
+
             </C.Container>
         </Theme>
     )
