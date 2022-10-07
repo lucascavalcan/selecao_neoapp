@@ -15,6 +15,6 @@ const hash = md5(time + privateKey + publicKey);
 export const api = {
     getAllComics: async () => {
         let response = await axiosInstance.get(`/v1/public/comics?ts=${time}&apikey=${publicKey}&hash=${hash}`);
-        return response.data.data;
+        return response.data.data.results;
     }
 }

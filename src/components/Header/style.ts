@@ -4,7 +4,7 @@ import bgHeader from "../../images/bg-black-and-white-1.png";
 export const Container = styled.div`
     height: 200px;
     width: 100vw;
-    background-color: #033434;
+    background-color: #131a1a;
     background-image: url(${bgHeader});
     display: flex;
     flex-direction: row;
