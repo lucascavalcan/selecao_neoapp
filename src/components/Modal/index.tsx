@@ -1,0 +1,52 @@
+import * as C from "./style";
+import { Comic } from "../../types/Comic";
+import {UseAppSelector} from "../../redux/hooks/useAppSelector";
+import {useDispatch} from "react-redux";
+import {setItems, addItems} from "../../redux/reducers/cartReducer";
+
+type Props = {
+    closeModal: () => void,
+    Data: Comic
+}
+
+export const Modal = ({closeModal, Data}: Props) => {
+    
+    const dispacth = useDispatch();
+    const card = UseAppSelector(state => state.cart);
+
+    function handleAddProdut() {
+        dispacth( addItems(Data) );
+        closeModal();
+        alert ("Item adicionado ao carrinho!")
+    }
+    
+    return(
+        <C.Container>
+            <C.ModalBody>
+
+                <C.ModalLeft>
+                    <C.ComicBig>
+                        <img src={`${Data.thumbnail.path}.${Data.thumbnail.extension}`} alt=""/>
+                    </C.ComicBig>
+                    <C.ComicInfoPriceArea>
+                        <C.ComicInfoSector>Preço</C.ComicInfoSector>
+                        <C.ComicInfoActualPrice>R$50,99</C.ComicInfoActualPrice>
+                    </C.ComicInfoPriceArea>
+                </C.ModalLeft>
+
+                <C.ModalRight>
+                    <C.ComicInfo>
+                        <h1>{Data.title}</h1>
+                        <C.ComicInfoDesc>
+                            {Data.description}
+                        </C.ComicInfoDesc>
+                    </C.ComicInfo>
+
+                    <C.AddButton onClick={handleAddProdut}>Adicionar ao carrinho</C.AddButton>
+                    <C.CancelButton onClick={closeModal}>Cancelar</C.CancelButton>
+                </C.ModalRight>
+
+            </C.ModalBody>
+        </C.Container>
+    )
+}
