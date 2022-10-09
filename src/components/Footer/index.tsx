@@ -1,6 +1,11 @@
 import * as C from "./style";
 import Logo from "../../images/logo-footer.png";
 import Image from "../../images/banner7.jpg";
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import FacebookIcon from '@mui/icons-material/Facebook';
+
 
 export const Footer = () => {
     return (
@@ -21,10 +26,10 @@ export const Footer = () => {
                 <C.FooterSocial>
                     SIGA-NOS!
                     <C.SocialLinks>
-                        <a href="https://twitter.com/marvel">TWITTER</a>
-                        <a href="https://www.instagram.com/marvel/">INSTAGRAM</a>
-                        <a href="https://www.youtube.com/marvel">YOUTUBE</a>
-                        <a href="https://www.facebook.com/MarvelBR/?brand_redir=6883542487">FACEBOOK</a>
+                        <a href="https://twitter.com/marvel"><TwitterIcon className="logo"/></a>
+                        <a href="https://www.instagram.com/marvel/"><InstagramIcon className="logo"/></a>
+                        <a href="https://www.youtube.com/marvel"><YouTubeIcon className="logo"/></a>
+                        <a href="https://www.facebook.com/MarvelBR/?brand_redir=6883542487"><FacebookIcon className="logo"/></a>
                     </C.SocialLinks>
 
                 </C.FooterSocial>

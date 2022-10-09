@@ -55,7 +55,6 @@ export const ComicBig = styled.div`
 `;
 
 export const ComicInfo = styled.div`
-    font-family:'Hepta Slab', Helvetica, Arial;
     padding-bottom:20px;
     margin-right: 20px;
 
@@ -70,7 +69,6 @@ export const ComicInfoDesc = styled.div`
     line-height: 15px;
     color:#999;
     margin-top:10px;
-    font-family:'Lato',Helvetica,Arial;
 `;
 
 export const ComicInfoPriceArea = styled.div`
@@ -104,6 +102,7 @@ export const AddButton = styled.div`
     display:inline-block;
     cursor:pointer;
     margin-right:30px;
+    font-family:'Hepta Slab', Helvetica, Arial;
 
     &:hover {
         opacity: 0.8;
@@ -120,6 +119,7 @@ export const CancelButton = styled.div`
     display:inline-block;
     cursor:pointer;
     margin-right:30px;
+    font-family:'Hepta Slab', Helvetica, Arial;
 
     &:hover {
         opacity: 0.8;

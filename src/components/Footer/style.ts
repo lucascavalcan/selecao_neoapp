@@ -50,7 +50,11 @@ export const FooterSocial = styled.div`
 `;
 
 export const SocialLinks = styled.div`
-
+    margin-top: 10px;
+    .logo {
+        color: #fff;
+        margin-right: 10px;
+    }
 `;
 
 export const FooterBottom = styled.div`
