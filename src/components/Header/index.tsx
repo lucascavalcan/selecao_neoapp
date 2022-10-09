@@ -1,5 +1,6 @@
 import * as C from "./style";
 import Logo from "../../images/logo.png"
+import {Link} from "react-router-dom";
 
 export const Header = () => {
     return (
@@ -11,8 +12,8 @@ export const Header = () => {
                 <ul>
                     <li><a href="">CARRINHO</a></li>
                     <li><a href="">HOME</a></li>
-                    <li><a href="">PRODUTOS</a></li>
-                    <li><a href="">CONTATO</a></li>
+                    <li><a href="#Products">PRODUTOS</a></li>
+                    <li><a href="#Footer">CONTATO</a></li>
                 </ul>
             </C.HeaderMenu>
         </C.Container>

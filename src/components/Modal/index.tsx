@@ -14,10 +14,12 @@ export const Modal = ({closeModal, Data}: Props) => {
     const dispacth = useDispatch();
     const card = UseAppSelector(state => state.cart);
 
+    //adicionar produtos no carrinho:    
     function handleAddProdut() {
         dispacth( addItems(Data) );
         closeModal();
         alert ("Item adicionado ao carrinho!")
+        console.log(card.items)
     }
     
     return(

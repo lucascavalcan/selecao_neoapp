@@ -21,7 +21,7 @@ export const Container = styled.div`
 export const ModalBody = styled.div`
     width: 850px;
     height: 500px;
-    background-color:#FFF;
+    background-color:rgba(0, 0, 0, 0.9);
     border-radius:10px;
     box-shadow:0px 0px 15px #999;
     display:flex;
@@ -61,6 +61,7 @@ export const ComicInfo = styled.div`
 
     h1 {
         margin-top:50px;
+        color: #fff;
     }
 `;
 
@@ -90,6 +91,7 @@ export const ComicInfoSector = styled.div`
 
 export const ComicInfoActualPrice = styled.div`
     font-size:28px;
+    color: #fff;
 `;
 
 export const AddButton = styled.div`

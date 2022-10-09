@@ -4,7 +4,7 @@ import Image from "../../images/banner7.jpg";
 
 export const Footer = () => {
     return (
-        <C.Container>
+        <C.Container id="Footer">
             <C.FooterTop>
                 <C.FooterLogo>
                     <img src={Logo} width="90" height="100" alt=""/>

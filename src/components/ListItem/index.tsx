@@ -25,13 +25,9 @@ export const ListItem = ({data}: Props) => {
         setShowModal(false);
     }
 
-    //add produtos no carrinho:
-    function handleAddProdut() {
-        dispacth( setItems(data) );
-    }
 
     return(
-        <C.Container>
+        <C.Container id="Products">
             {showModal ? <Modal Data={data} closeModal={HandleCloseModal}/> : null}
             <C.Area onClick={showOrHide}>
                 <C.Image>
