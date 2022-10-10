@@ -30,7 +30,7 @@ export const HeaderMenu = styled.div`
         align-items: center;
         justify-content: center;
 
-        a {
+        .menuItem {
             text-decoration: none;
             background-color: #E4F0F2;
             color: #000;

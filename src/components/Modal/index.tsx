@@ -3,6 +3,8 @@ import { Comic } from "../../types/Comic";
 import {UseAppSelector} from "../../redux/hooks/useAppSelector";
 import {useDispatch} from "react-redux";
 import {setItems, addItems} from "../../redux/reducers/cartReducer";
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 type Props = {
     closeModal: () => void,
@@ -44,8 +46,19 @@ export const Modal = ({closeModal, Data}: Props) => {
                         </C.ComicInfoDesc>
                     </C.ComicInfo>
 
-                    <C.AddButton onClick={handleAddProdut}>Adicionar ao carrinho</C.AddButton>
-                    <C.CancelButton onClick={closeModal}>Cancelar</C.CancelButton>
+                    <C.AddButton onClick={handleAddProdut}>
+                        <div>
+                            <AddShoppingCartIcon/>
+                        </div>
+                        <span>Adicionar ao carrinho</span>
+                    </C.AddButton>
+
+                    <C.CancelButton onClick={closeModal}>
+                        <div>
+                            <HighlightOffIcon/>
+                        </div>
+                        <span>Cancelar</span>
+                    </C.CancelButton>
                 </C.ModalRight>
 
             </C.ModalBody>

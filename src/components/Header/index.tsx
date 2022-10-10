@@ -10,10 +10,10 @@ export const Header = () => {
             </C.HeaderLogo>
             <C.HeaderMenu>
                 <ul>
-                    <li><a href="">CARRINHO</a></li>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="#Products">PRODUTOS</a></li>
-                    <li><a href="#Footer">CONTATO</a></li>
+                    <li><Link to="/cart" className="menuItem">CARRINHO</Link></li>
+                    <li><Link to="/" className="menuItem">HOME</Link></li>
+                    <li><a href="#Products" className="menuItem">PRODUTOS</a></li>
+                    <li><a href="#Footer" className="menuItem">CONTATO</a></li>
                 </ul>
             </C.HeaderMenu>
         </C.Container>

@@ -94,34 +94,80 @@ export const ComicInfoActualPrice = styled.div`
 
 export const AddButton = styled.div`
     margin-top:10px;
-    padding:10px 20px;
-    width: 200px;
-    border-radius:20px;
-    background-color:#48d05f;
-    color:#FFF;
-    display:inline-block;
-    cursor:pointer;
     margin-right:30px;
-    font-family:'Hepta Slab', Helvetica, Arial;
 
+    background: #48d05f;
+    color: #fff;
+    border: 0;
+    border-radius: 12px;
+    width: 290px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all ease .4s;
+
+    display: flex;
+    align-items: center;
+  
     &:hover {
-        opacity: 0.8;
+      opacity: 0.8;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.1);
+        margin-right: 10px;
+
+        svg {
+            
+            color: #fff;
+            size: 16px;
+        }
+
+        span {
+            flex: 1;
+            tetx-align: center;
+        }
     }
 `;
 
 export const CancelButton = styled.div`
-    margin-top:10px;
-    padding:10px 20px;
-    width: 100px;
-    border-radius:20px;
-    background-color:#f00;
-    color:#FFF;
-    display:inline-block;
-    cursor:pointer;
+    margin-top:20px;
     margin-right:30px;
-    font-family:'Hepta Slab', Helvetica, Arial;
 
+    width: 180px;
+    background: #f00;
+    color: #fff;
+    border: 0;
+    border-radius: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all ease .4s;
+
+    display: flex;
+    align-items: center;
+  
     &:hover {
-        opacity: 0.8;
+      opacity: 0.8;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.1);
+        margin-right: 10px;
+
+        svg {
+            
+            color: #fff;
+            size: 16px;
+        }
+
+        span {
+            flex: 1;
+            tetx-align: center;
+        }
     }
 `;

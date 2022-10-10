@@ -19,7 +19,7 @@ export const FooterTop = styled.div`
 `;
 
 export const FooterLogo = styled.div`
-
+    cursor: pointer;
 `;
 
 export const FooterLinks = styled.div`
