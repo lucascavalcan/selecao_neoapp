@@ -13,7 +13,8 @@ export type Comic = {
         items: Item[] 
         
     },
-    price: number
+    price: number,
+    count: number
 };
 
 export type Item =  { 

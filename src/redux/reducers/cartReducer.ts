@@ -3,6 +3,7 @@ import { Comic } from "../../types/Comic";
 
 type State = {
     items: Comic[];
+
 }
 
 export type Action = {
@@ -22,11 +23,18 @@ export const slice = createSlice({
 
         addItems: (state: State, action: Action) => {
             state.items.push(action.payload);
-        }
+        },
+
+        removeItems: (state: State, action: Action) => {
+            const items = state.items.filter((items) => items.id !== action.payload);
+            state.items = items;
+        },
+
+
 
 
     }
 });
 
-export const {setItems, addItems} = slice.actions;
+export const {setItems, addItems, removeItems} = slice.actions;
 export default slice.reducer

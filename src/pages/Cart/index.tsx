@@ -4,8 +4,9 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 
-import { useNavigate } from "react-router-dom";
 import { UseAppSelector } from "../../redux/hooks/useAppSelector";
+import {useDispatch} from "react-redux";
+import {setItems, addItems, removeItems} from "../../redux/reducers/cartReducer";
 
 import { Comic } from "../../types/Comic"; 
 
@@ -19,13 +20,23 @@ interface Product {
 
 export const Cart = () => {
 
+    const dispacth = useDispatch();
     const card = UseAppSelector(state => state.cart);
 
-    const navigate = useNavigate();
 
-    function handleBackButton() {
-        navigate(-1);
+    function handleIncrement() {
+
     }
+
+    function handleDecrement() {
+
+    }
+
+    function handleRemoveProduct(Item: Comic) {
+        const prod = { ...Item, count: 1 };
+        dispacth( removeItems(Item) )
+    }
+
 
     function handleFinishButton() {
         alert("Compra finalizada!")
@@ -79,7 +90,7 @@ export const Cart = () => {
                                 </td>
 
                                 <td>
-                                    <button>
+                                    <button onClick={() => handleRemoveProduct(item)}>
                                         <DeleteIcon width={20}/>
                                     </button>
                                 </td>
@@ -89,7 +100,7 @@ export const Cart = () => {
                 </C.ProductTable>
 
                 <footer>
-                    <button>Finalizar pedido</button>
+                    <button onClick={handleFinishButton}>Finalizar pedido</button>
                     <C.Total>
                         <span>TOTAL</span>
                         <strong>R$ --, --</strong>

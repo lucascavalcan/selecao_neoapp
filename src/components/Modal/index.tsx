@@ -21,7 +21,6 @@ export const Modal = ({closeModal, Data}: Props) => {
         dispacth( addItems(Data) );
         closeModal();
         alert ("Item adicionado ao carrinho!")
-        console.log(card.items)
     }
     
     return(
