@@ -6,40 +6,26 @@ import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 
 import { UseAppSelector } from "../../redux/hooks/useAppSelector";
 import {useDispatch} from "react-redux";
-import {setItems, addItems, removeItems} from "../../redux/reducers/cartReducer";
+import {removeItems} from "../../redux/reducers/cartReducer";
 
 import { Comic } from "../../types/Comic"; 
 
-interface Product {
-    id: number,
-    title: string,
-    price: number,
-    thumnbail: string,
-    amount: number
-}
-
 export const Cart = () => {
 
-    const dispacth = useDispatch();
+    const dispatch = useDispatch();
     const card = UseAppSelector(state => state.cart);
 
-
-    function handleIncrement() {
-
-    }
-
-    function handleDecrement() {
-
+    function calculateTotal(n: number):string {
+        const total = (n * 50.99).toFixed(2);
+        return total
     }
 
     function handleRemoveProduct(Item: Comic) {
-        const prod = { ...Item, count: 1 };
-        dispacth( removeItems(Item) )
+        dispatch( removeItems(Item) )
     }
 
-
     function handleFinishButton() {
-        alert("Compra finalizada!")
+        alert(`Compra finalizada no valor de R$ ${calculateTotal(card.items.length)}!`)
     }
 
     return (
@@ -50,7 +36,7 @@ export const Cart = () => {
                         <tr>
                             <th/>
                             <th>PRODUTO</th>
-                            <th>QTD</th>
+
                             <th>SUBTOTAL</th>
                             <th />
                         </tr>
@@ -71,22 +57,7 @@ export const Cart = () => {
                                 </td>
 
                                 <td>
-                                    <div>
-                                        <button>
-                                            <RemoveCircleOutlineIcon/>
-                                        </button>
-                                        <input
-                                            type="text"
-                                            readOnly
-                                        />
-                                        <button>
-                                            <AddCircleOutlineIcon/>
-                                        </button>
-                                    </div>
-                                </td>
-
-                                <td>
-                                    <strong>VALOR TOTAL</strong>
+                                    <strong>R$ 50,99</strong>
                                 </td>
 
                                 <td>
@@ -103,7 +74,7 @@ export const Cart = () => {
                     <button onClick={handleFinishButton}>Finalizar pedido</button>
                     <C.Total>
                         <span>TOTAL</span>
-                        <strong>R$ --, --</strong>
+                        <strong>R$ {calculateTotal(card.items.length)}</strong>
                     </C.Total>
                 </footer>
             </C.Container>

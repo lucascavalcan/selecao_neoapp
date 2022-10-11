@@ -7,14 +7,9 @@ export type Comic = {
         path: string,
         extension: string
     },
-    creators: {
-        available: number,
-        collectionURI: string,
-        items: Item[] 
-        
-    },
+    creators: string,
     price: number,
-    count: number
+    amount: number;
 };
 
 export type Item =  { 

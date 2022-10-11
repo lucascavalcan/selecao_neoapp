@@ -6,16 +6,8 @@ import { ListItem } from "../../components/ListItem";
 
 import { Comic } from "../../types/Comic";
 
-import {UseAppSelector} from "../../redux/hooks/useAppSelector";
-import {setItems} from "../../redux/reducers/cartReducer";
-import {useDispatch} from "react-redux";
-
-
 export const Home = () => {
 
-    const dispacth = useDispatch();
-    const card = UseAppSelector(state => state.cart);
-    
     const [comics, setComics] = useState<Comic[]>([])
     const [loading, setLoading] = useState(false);
 
@@ -27,13 +19,7 @@ export const Home = () => {
         setLoading(true)
         let json = await api.getAllComics()
         setLoading(false)
-        console.log(json)
         setComics(json)
-        console.log(comics)
-    }
-
-    function handleAddProdut() {
-        dispacth( setItems(card.items) );
     }
 
     return (

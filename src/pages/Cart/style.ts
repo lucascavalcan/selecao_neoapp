@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
     padding: 30px;
     background: #fff;
-    margin: 10px 50px 10px 50px;
+    margin: 10px 100px 10px 100px;
     border-radius: 5px;
 
     footer {

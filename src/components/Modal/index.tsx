@@ -2,7 +2,7 @@ import * as C from "./style";
 import { Comic } from "../../types/Comic";
 import {UseAppSelector} from "../../redux/hooks/useAppSelector";
 import {useDispatch} from "react-redux";
-import {setItems, addItems} from "../../redux/reducers/cartReducer";
+import {addItems} from "../../redux/reducers/cartReducer";
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
