@@ -7,7 +7,11 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     color: #eee;
-    margin-top: 200px
+    margin-top: 200px;
+
+    @media (max-width: 1120px) {
+        width: 1120px;
+    }
 `;
 
 export const FooterTop = styled.div`
@@ -42,6 +46,10 @@ export const FooterLinks = styled.div`
 export const FooterImage = styled.div`
     margin-top: -200px;
     margin-right: -60px;
+
+    @media (max-width: 1120px) {
+        display: none;
+    }
 `;
 
 export const FooterSocial = styled.div`
@@ -63,13 +71,30 @@ export const FooterBottom = styled.div`
     display:flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
 `;
 
 export const FotterBotomLeft = styled.div`
     margin-left: -290px;
+
+    @media (max-width: 1200px) {
+        margin-left: -200px;
+    }
+
+    @media (max-width: 1000px) {
+        margin-left: -150px;
+    }
 `;
 
 export const FooterBottomRight = styled.div`
     margin-right: -280px;
     font-size: 14px;
+
+    @media (max-width: 1200px) {
+        margin-right: -200px;
+    }
+
+    @media (max-width: 1200px) {
+        margin-right: -150px;
+    }
 `;

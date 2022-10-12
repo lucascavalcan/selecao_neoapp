@@ -28,6 +28,15 @@ export const Container = styled.div`
           }
         }
       }
+
+      @media (max-width: 1120px) {
+        margin: 10px 50px 10px 50px;
+        margin-top: 100px;
+      }
+
+      @media (max-width: 900px) {
+        width: 880px;
+      }
 `;
 
 export const ProductTable = styled.table`

@@ -27,6 +27,18 @@ export const ModalBody = styled.div`
     display:flex;
     margin:20px 0px;
     transition: all ease .5s;
+
+    @media(max-width: 800px) {
+        width: 700px;
+        height: 650px;
+    }
+
+    @media(max-width: 700px) {
+        width: 800px;
+        height: 750px;
+        margin-left: 0;
+        margin-right: 0;
+    }
 `;
 
 export const ModalLeft = styled.div`
