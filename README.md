@@ -45,16 +45,16 @@ Antes de iniciar o projeto, você vai precisar das seguintes ferramentas:
 
 - Home:
 
-!<img src="../src/images/home1.png" tittle="home1">
+![home1](./src/images/home1.png)
 <br/>
 
 ![home2](./src/images/home2.png)
 
 - Modal:
-![modal](../../www/modal.png)
+![modal](./src/images/modal.png)
 
 - Carrinho:
-![cart](../../www/cart.png)
+![cart](./src/images/cart.png)
 
 
 ### Clonar o repositório
