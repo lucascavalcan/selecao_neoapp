@@ -1,46 +1,81 @@
-# Getting Started with Create React App
+# NEOAPP SELEÇÃO
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto criado como etapa de processo seletivo da empresa NeoApp. Aplicação de listagem e carrinho de produtos simulando ecommerce utilizando Typescript + React + Redux. </br>
+As informações referentes aos produtos foram fornecidas pela API da [Marvel](https://developer.marvel.com).
 
-## Available Scripts
+### Status do Projeto
 
-In the project directory, you can run:
+✔️ Concluído.
 
-### `npm start`
+### 🛠 Tecnologias utilizadas:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Neste projeto foram utilizadas as seguintes tecnologias e bibliotecas:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [React](https://pt-br.reactjs.org/)
+- [Styled-Components](https://styled-components.com/docs/basics#installation)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React Hooks](https://pt-br.reactjs.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [React Router](https://reactrouter.com/en/main)
+- [Material-UI](https://mui.com/pt/)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ⚙ Pré-requisitos
 
-### `npm run build`
+Antes de iniciar o projeto, você vai precisar das seguintes ferramentas:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [VsCode](https://code.visualstudio.com/download)
+- [Git](https://git-scm.com/)
+- [NodeJs](https://nodejs.org/en/download/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🛠 Desenvolvimento:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Inicialmente, para pegar as informações dos produtos que iriam aparecer no ecommerce, foi feita uma requisição fetch à API externa. Para isso, foi utilizada a biblioteca axios;
+- A aplicação foi dividida em duas páginas, através do React Router --> ficando a divisão da seguinte forma: página home onde foi colcoada a listagem dos produtos e a página do carrinho onde se encontra os produtos selecionados, o cálculo do valor total a ser pago e a função de finalizar a compra;
+- Todo o projeto foi dividido em components, como por exemplo, o Footer e o Header;
+- Pelo fato de as duas páginas (Home e Cart) possuírem o Footer e o Header, optou-se por criar o componente Theme, no qual incluiu-se esses dois componentes. O restante das páginas que estiverem sendo mostradas ficaria dentro do componente Page --> sendo passados através de uma children;
+- Os itens fornecidos pela API (que são mostrados na página Home) foram colocados no component ListItem --> para isso, fez-se a requisição à API, pegou-se o array que retornou e deu-se um map neles, colocando cada um dos itens no component ListItem através da função em questão;
+- Optou-se por criar um component Modal onde seriam mostradas as infos de cada HQ. Para isso, passou-se os dados de cada item através de uma Props e, usou-se uma função que exibia o Modal sempre que clicava em algum ListItem --> após clicar no button "adicionar ao carrinho" esse item é colocado no Cart através do gerenciamento de estado global do Redux;
+- No carrinho, criou-se uma tabela com os produtos que tiverem sido adicionados. Para isso, deu-se um map nos produtos que haviam sido adicionados no carrinho (foi usado o hook do Redux UseAppSelector);
+- Para excluir um produto do carrinho, importou-se a action removeItem criada no reducer que usa o filter para remover o produto que tiver o id selecionado;
+- Toda a estilização do projeto foi feita com o styled components --> Usou-se a bibliteca Material-UI para adicionar alguns icons na página apenas para fins de estilização.
 
-### `npm run eject`
+### Demonstração:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Home:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![home1](../../www/home1.png)
+<br/>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![home2](../../www/home2.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Modal:
+![modal](../../www/modal.png)
 
-## Learn More
+- Carrinho:
+![cart](../../www/cart.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Clonar o repositório
+
+```bash
+$ git clone <https://github.com/lucascavalcan/nootselecao>
+```
+
+### Instalar dependências
+
+```bash
+npm install
+```
+
+### Rodar o projeto
+
+```bash
+npm start
+```
+
+### Autor
+
+Projeto criado por [Lucas Cavalcanti de Araujo](https://lucascavalcan.github.io/) </br>
+Feito com ❤️
