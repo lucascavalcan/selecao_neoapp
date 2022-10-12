@@ -45,10 +45,10 @@ Antes de iniciar o projeto, você vai precisar das seguintes ferramentas:
 
 - Home:
 
-![home1]("../../www/home1.png")
+!<img src="../src/images/home1.png" tittle="home1">
 <br/>
 
-![home2](../../www/home2.png)
+![home2](./src/images/home2.png)
 
 - Modal:
 ![modal](../../www/modal.png)
