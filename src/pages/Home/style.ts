@@ -29,6 +29,11 @@ export const Banner = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
+    @media (max-width: 900px) {
+        width: 1000px;
+        margin-left: -100px;
+    }
 `;
 
 export const Button = styled.div`
