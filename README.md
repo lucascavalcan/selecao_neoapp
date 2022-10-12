@@ -45,7 +45,7 @@ Antes de iniciar o projeto, você vai precisar das seguintes ferramentas:
 
 - Home:
 
-![home1](../../www/home1.png)
+![home1]("../../www/home1.png")
 <br/>
 
 ![home2](../../www/home2.png)
@@ -60,7 +60,7 @@ Antes de iniciar o projeto, você vai precisar das seguintes ferramentas:
 ### Clonar o repositório
 
 ```bash
-$ git clone <https://github.com/lucascavalcan/nootselecao>
+$ git clone <https://github.com/lucascavalcan/selecao_neoapp>
 ```
 
 ### Instalar dependências
