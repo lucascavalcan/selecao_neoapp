@@ -18,6 +18,7 @@ export const Area = styled.div`
     padding: 20px;
     margin-left: 20px;
     cursor: pointer;
+
 `;
 
 export const Image = styled.div`

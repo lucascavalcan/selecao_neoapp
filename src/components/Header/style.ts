@@ -5,12 +5,13 @@ export const Container = styled.div`
     height: 200px;
     width: 100%;
     background-color: #131a1a;
-    background-image: url(${bgHeader});
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(${bgHeader});
+    
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 0;
 
     @media (max-width: 1120px) {
         margin-bottom: 0;

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { api } from "../../api";
 import { Theme } from "../../components/Theme";
 import { ListItem } from "../../components/ListItem";
+import Image from "../../images/banner5.jpg"
 
 import { Comic } from "../../types/Comic";
 
@@ -25,6 +26,10 @@ export const Home = () => {
     return (
         <Theme>
             <C.Container>
+                <C.Banner>
+                    <C.Text>NOVOS LANÇAMENTOS EM <strong>10 DE NOV</strong></C.Text>
+                    <C.Button><a href="#Products" className="menuItem">VER COMICS DISPONÍVEIS</a></C.Button>
+                </C.Banner>
                 {loading &&
                     <div>Carregando...</div>
                 }
