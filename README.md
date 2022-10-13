@@ -58,6 +58,7 @@ Antes de iniciar o projeto, você vai precisar das seguintes ferramentas:
 ![cart](./src/images/cart.png)
 
 <br/>
+
 Aplicação rodando no [Vercel](https://selecaoneoapplucas.vercel.app/).
 
 ### Clonar o repositório
