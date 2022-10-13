@@ -1,7 +1,9 @@
 # NEOAPP SELEÇÃO
 
-Projeto criado como etapa de processo seletivo da empresa NeoApp. Aplicação de listagem e carrinho de produtos simulando ecommerce utilizando Typescript + React + Redux. </br>
+Projeto criado como etapa de processo seletivo da empresa NeoApp. Aplicação de listagem e carrinho de produtos simulando ecommerce utilizando Typescript + React + Redux. <br/>
 As informações referentes aos produtos foram fornecidas pela API da [Marvel](https://developer.marvel.com).
+<br/><br/>
+Você pode acessar a aplicação [clicando aqui]().
 
 ### Status do Projeto
 
